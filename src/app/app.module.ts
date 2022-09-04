@@ -18,8 +18,12 @@ import { ArchivesComponent } from './pages/archives/archives.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: 'home', component: HomeComponent},
-      {path: 'aboutus', component: AboutUsComponent},
+      {path: 'home', component: HomeComponent,data:{title:'Home'}},
+      {path: 'aboutus', component: AboutUsComponent,data:{title:'About Us'}},
+      // {
+      //   path: 'aboutus', component: AboutUsComponent,data:{title:'About Us'},
+      //   children:[{path:'child1',component:childComponent,data:{title:'child1'}}]
+      // },
       {path: '', redirectTo: '/home', pathMatch: 'full'},
 
     ]),
